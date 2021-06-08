@@ -1,6 +1,5 @@
 port module Main exposing (main)
 
-import Html.Attributes exposing (disabled)
 import Json.Decode as Decode
 import Json.Encode as Encode
 import Platform exposing (worker)
