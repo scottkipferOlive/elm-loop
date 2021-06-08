@@ -7,7 +7,7 @@ import Platform exposing (worker)
 
 
 type alias Model =
-    { counter : Int }
+    {}
 
 
 type Markdown
@@ -82,8 +82,8 @@ markdownToJSON (Markdown md) =
 
 
 init : Int -> ( Model, Cmd Msg )
-init flags =
-    ( { counter = flags }, Cmd.none )
+init _ =
+    ( {}, Cmd.none )
 
 
 type Msg
@@ -95,9 +95,9 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         OnSearch text ->
-            ( model, newWhisper <| markdownToJSON (Markdown <| "hi " ++ text) )
+            ( model, newWhisper <| markdownToJSON (Markdown <| "hello " ++ text) )
 
-        WhisperInteract val ->
+        WhisperInteract _ ->
             ( model, Cmd.none )
 
 

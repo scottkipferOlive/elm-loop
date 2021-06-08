@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --entry ./index.js --config ./node_modules/@oliveai/ldk/dist/webpack/config.js",
-    "elm": "elm make src/Main.elm --output=build/elm.js"
+    "elm": "elm make src/Main.elm --optimize --output=build/elm.js"
   },
   "author": "LDK Team",
   "license": "ISC",
